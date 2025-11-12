@@ -2,21 +2,96 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Budgitin</title>
-    <meta name="description" content="Coming Soon" />
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Budgitin</title>
+  <meta name="description" content="Coming Soon" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: system-ui, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    main {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    main img {
+      max-width: 120px;
+      width: 30%;
+      height: auto;
+      margin-bottom: 16px;
+      margin-top: 20px;
+    }
+
+    .coming-soon {
+      font-size: 1.6rem;
+      font-weight: 600;
+      background: #111;
+      padding: 8px 16px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      display: inline-block;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* Keeps YouTube’s 16:9 aspect ratio naturally */
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      .coming-soon {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <main>
-        <img src="assets/placeholder_logo.svg" alt="Budgitin Logo" />
-        <span class="coming-soon">Coming Soon</span>
-    </main>
-</body>
+  <main>
+    <img src="assets/favicon.svg" alt="Budgitin Logo" />
+    <span class="coming-soon">Coming Soon</span>
 
-</html>
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/L7crCxHAzUI"
+        title="Introducing Budgitin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </main>
+</body>
 
 </html>
